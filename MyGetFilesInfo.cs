@@ -2,11 +2,11 @@ public class MyGetFilesInfo
 {
     public IEnumerable<MyFileData> GetFiles(string path)
     {
-  
+        if (path == "" || path == null)
+            return Enumerable.Empty<MyFileData>();
+
         List<MyFileData> files = new List<MyFileData>();
 
-        try
-        {
             string[] paths = Directory.GetFiles(path);
 
             foreach (string temp_path in paths)
@@ -23,12 +23,5 @@ public class MyGetFilesInfo
             }
 
             return files.AsEnumerable();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.ToString());
-        }
-
-        return files;
     }
 }

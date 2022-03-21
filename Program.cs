@@ -6,7 +6,7 @@ builder.Services.AddTransient<MyGetFilesInfo>();
 
 var app = builder.Build();
 
-app.MapGet($"/browse", (string? path, string? group, MyGetFilesInfo myGetFilesInfo) =>
+app.MapGet("/browse", (string? path, string? group, MyGetFilesInfo myGetFilesInfo) =>
 {
     IEnumerable<MyFileData> files = myGetFilesInfo.GetFiles(path);
 
