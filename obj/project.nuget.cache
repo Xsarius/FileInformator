@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "bhD+R0YuYIamvv3N9o/PHwZIr1QJ/Q2HmXo45Io7w+4qj4xNuHoh9CISgiI5qwH4T+h0GEUcSHailn/CVBsQeQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kubaj\\OneDrive - Politechnika Warszawska\\Dokumenty\\Power Engineering Bachelor PW\\Jobs\\Catalogic Software\\FileInformator\\FileInformator\\FileInformator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kubaj\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\kubaj\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}
