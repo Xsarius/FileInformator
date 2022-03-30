@@ -1,43 +1,21 @@
-using Newtonsoft.Json.Linq;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<MyGetFilesInfo>();
 
 var app = builder.Build();
 
-app.MapGet("/browse", (string? path, string? group, MyGetFilesInfo myGetFilesInfo) =>
+app.MapGet("/browse", (HttpRequest request, MyGetFilesInfo myGetFilesInfo) =>
 {
-    IEnumerable<MyFileData> files = myGetFilesInfo.GetFiles(path);
 
-    if (group == "true")
+    string path = request.Query["path"];
+    bool group = Convert.ToBoolean(request.Query["group"]);
+
+    if (group)
     {
-        JArray group_query = new JArray(
-            from file in files
-            select new JObject(
-                new JProperty("type", file.FileType),
-                new JProperty("files",
-                    new JArray(
-                        from f in files
-                        where f.FileType == file.FileType
-                        select new JObject(
-                            new JProperty("Name", file.Name),
-                            new JProperty("LastMod", file.LastMod),
-                            new JProperty("Size", file.Size)
-                        )))));
-            
-        return group_query.ToString();
+        return myGetFilesInfo.GetGroupedFiles(path);
     }
 
-    JArray query = new JArray(
-        from file in files
-        select new JObject(
-            new JProperty("Name", file.Name),
-            new JProperty("LastMod", file.LastMod),
-            new JProperty("Size", file.Size)
-        ));
-
-    return query.ToString();
+    return myGetFilesInfo.GetUngroupedFiles(path);
 });
 
 app.Run();

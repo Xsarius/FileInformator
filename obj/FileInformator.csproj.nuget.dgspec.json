@@ -13,12 +13,8 @@
         "packagesPath": "C:\\Users\\kubaj\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\kubaj\\OneDrive - Politechnika Warszawska\\Dokumenty\\Power Engineering Bachelor PW\\Jobs\\Catalogic Software\\FileInformator\\FileInformator\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\kubaj\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
